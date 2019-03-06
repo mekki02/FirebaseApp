@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Question1" />
+        <activity android:name=".Question2" />
+        <activity android:name=".Question3" />
+        <activity android:name=".WrongAnswer" />
+        <activity android:name=".CorrectAnswer" />
+        <activity android:name=".Roulette" />
+        <activity android:name=".Question4" />
+        <activity android:name=".Question5" />
+        <activity android:name=".Question6"></activity>
     </application>
 
 </manifest>

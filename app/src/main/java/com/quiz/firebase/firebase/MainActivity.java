@@ -1,5 +1,6 @@
 package com.quiz.firebase.firebase;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addPersonne();
+                Intent intent = new Intent(MainActivity.this, Question1.class);
+                startActivity(intent);
             }
         });
     }
@@ -50,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             databasePersonnes.child(id).setValue(personne);
             Toast.makeText(MainActivity.this,"Ajouté avec succès",Toast.LENGTH_LONG).show();
         }else {
+            Toast.makeText(MainActivity.this,"Entrer le Nom",Toast.LENGTH_LONG).show();
         }
-        Toast.makeText(MainActivity.this,"Entrer un nom",Toast.LENGTH_LONG).show();
     }
 }
