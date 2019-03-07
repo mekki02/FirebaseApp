@@ -3,11 +3,11 @@
     android:oneshot="true">
     <item
         android:drawable="@drawable/logobas1"
-        android:duration="10"
+        android:duration="100"
         />
     <item
         android:drawable="@drawable/logobas2"
-        android:duration="10"
+        android:duration="100"
         />
 
 </animation-list>

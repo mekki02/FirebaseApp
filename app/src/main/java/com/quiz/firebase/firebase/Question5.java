@@ -41,11 +41,12 @@ public class Question5 extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }else{
-                    Intent intent = new Intent(Question5.this,WrongAnswer.class);
-                    intent.putExtra("question",question);
-                    intent.putExtra("reponse",responseString);
-                    intent.putExtra("reponseCorrecte",correctResponse);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(Question5.this,WrongAnswer.class);
+                    intent1.putExtra("question",question);
+                    intent1.putExtra("reponse",responseString);
+                    intent1.putExtra("reponseCorrecte",correctResponse);
+                    intent1.putExtra("wrong",5);
+                    startActivity(intent1);
                     finish();
                 }
             }

@@ -24,7 +24,9 @@
         <activity android:name=".Roulette" />
         <activity android:name=".Question4" />
         <activity android:name=".Question5" />
-        <activity android:name=".Question6"></activity>
+        <activity android:name=".Question6" />
+        <activity android:name=".WonRoulette" />
+        <activity android:name=".LostRoulette"></activity>
     </application>
 
 </manifest>

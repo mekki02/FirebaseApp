@@ -1,5 +1,6 @@
 package com.quiz.firebase.firebase;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -28,14 +29,20 @@ public class Roulette extends AppCompatActivity {
         r = new Random();
 
         b_roll = (Button) findViewById(R.id.b_roll);
+        b_roll.setBackgroundResource(R.drawable.btnplay);
 
         image1 = (ImageView) findViewById(R.id.image1);
         image2 = (ImageView) findViewById(R.id.image2);
         image3 = (ImageView) findViewById(R.id.image3);
 
+        image1.setBackgroundResource(R.drawable.logobas1);
+        image2.setBackgroundResource(R.drawable.logobas2);
+        image3.setBackgroundResource(R.drawable.logobas1);
+
         b_roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                b_roll.setBackgroundResource(R.drawable.btnplay);
                 //Animate the first image
                 image1.setBackgroundResource(R.drawable.anim);
                 final AnimationDrawable image1anim = (AnimationDrawable) image1.getBackground();
@@ -63,7 +70,7 @@ public class Roulette extends AppCompatActivity {
                         setImages();
                         getScore();
                     }
-                },500);
+                },2000);
             }
         });
 
@@ -109,9 +116,14 @@ public class Roulette extends AppCompatActivity {
     public void getScore(){
         if(img1 == img2 && img2 == img3){
             Toast.makeText(Roulette.this,"Vous avez Gagné !",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,WonRoulette.class);
+            startActivity(intent);
+            finish();
         } else {
-
             Toast.makeText(Roulette.this,"Vous avez Perdu !",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,LostRoulette.class);
+            startActivity(intent);
+            finish();
         }
     }
 }
