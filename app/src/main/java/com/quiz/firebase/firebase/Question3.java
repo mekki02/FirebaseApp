@@ -53,7 +53,7 @@ public class Question3 extends AppCompatActivity {
     }
 
     private boolean check(String response) {
-        if(response.equals(correctResponse)) {
+        if(response.toLowerCase().equals(correctResponse.toLowerCase())) {
             return true;
         } else {
             return false;
